@@ -8,13 +8,17 @@
 import Foundation
 import UIKit
 
-struct CharacterEntity {
+struct CharacterEntity: Equatable, Identifiable {
     let id: Int
     let name: String
     let status: String
     let image: String
     let location: String
     let episode: [String]
+    
+    static func ==(lhs: CharacterEntity, rhs: CharacterEntity) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name
+    }
 }
 
 extension CharacterEntity {

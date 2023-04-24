@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct RickyAndMortySwiftUIApp: App {
+    
+    let appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainContentView()
         }
+    }
+    
+    init() {
+        appState.startApp()
     }
 }

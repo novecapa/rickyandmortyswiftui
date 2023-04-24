@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7261180C29EED6C800F3E441 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7261180B29EED6C800F3E441 /* AppState.swift */; };
+		7261180F29EEDB0400F3E441 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7261180E29EEDB0400F3E441 /* CharacterCell.swift */; };
+		7270520C29F2AA14002CA722 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270520B29F2AA14002CA722 /* MainHeaderView.swift */; };
 		72D5EAB929E9476000060470 /* RickyAndMortySwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D5EAB829E9476000060470 /* RickyAndMortySwiftUIApp.swift */; };
-		72D5EABB29E9476000060470 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D5EABA29E9476000060470 /* ContentView.swift */; };
+		72D5EABB29E9476000060470 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D5EABA29E9476000060470 /* MainContentView.swift */; };
 		72D5EABD29E9476100060470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D5EABC29E9476100060470 /* Assets.xcassets */; };
 		72D5EAC029E9476100060470 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D5EABF29E9476100060470 /* Preview Assets.xcassets */; };
 		72D5EACA29E9476200060470 /* RickyAndMortySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D5EAC929E9476200060470 /* RickyAndMortySwiftUITests.swift */; };
@@ -47,9 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7261180B29EED6C800F3E441 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		7261180E29EEDB0400F3E441 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		7270520B29F2AA14002CA722 /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		72D5EAB529E9476000060470 /* RickyAndMortySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyAndMortySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D5EAB829E9476000060470 /* RickyAndMortySwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyAndMortySwiftUIApp.swift; sourceTree = "<group>"; };
-		72D5EABA29E9476000060470 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72D5EABA29E9476000060470 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		72D5EABC29E9476100060470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72D5EABF29E9476100060470 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72D5EAC529E9476200060470 /* RickyAndMortySwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickyAndMortySwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7261180D29EEDAFA00F3E441 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7261180E29EEDB0400F3E441 /* CharacterCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		72D5EAAC29E9476000060470 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +181,7 @@
 		72D5EAE329E9486C00060470 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				7261180B29EED6C800F3E441 /* AppState.swift */,
 				72D5EAB829E9476000060470 /* RickyAndMortySwiftUIApp.swift */,
 			);
 			path = App;
@@ -184,8 +199,10 @@
 		72D5EAE529E9488100060470 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				7261180D29EEDAFA00F3E441 /* Cells */,
 				72D5EAFC29E95FC000060470 /* MainViewModel.swift */,
-				72D5EABA29E9476000060470 /* ContentView.swift */,
+				7270520B29F2AA14002CA722 /* MainHeaderView.swift */,
+				72D5EABA29E9476000060470 /* MainContentView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -437,15 +454,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7261180F29EEDB0400F3E441 /* CharacterCell.swift in Sources */,
 				72D5EAFF29E9FCA400060470 /* CharacterUseCase.swift in Sources */,
 				72D5EB0229E9FE6200060470 /* RealmHelper.swift in Sources */,
-				72D5EABB29E9476000060470 /* ContentView.swift in Sources */,
+				72D5EABB29E9476000060470 /* MainContentView.swift in Sources */,
 				72D5EAF529E9496400060470 /* CharacterNetworkClient.swift in Sources */,
 				72D5EAFB29E94C7300060470 /* CharactersDTO.swift in Sources */,
 				72D5EB0D29E9FFAC00060470 /* Utils.swift in Sources */,
 				72D5EAB929E9476000060470 /* RickyAndMortySwiftUIApp.swift in Sources */,
+				7270520C29F2AA14002CA722 /* MainHeaderView.swift in Sources */,
 				72D5EAF329E9495300060470 /* CharacterRepository.swift in Sources */,
 				72D5EAF929E94B7900060470 /* CharacterEntity.swift in Sources */,
+				7261180C29EED6C800F3E441 /* AppState.swift in Sources */,
 				72D5EAF729E9497F00060470 /* NetworkError.swift in Sources */,
 				72D5EB0929E9FEC500060470 /* CharacterRDataClient.swift in Sources */,
 				72D5EB0B29E9FEDF00060470 /* RCharacter.swift in Sources */,
@@ -536,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -590,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -608,6 +628,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RickyAndMortySwiftUI/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = SQPG2GUVW5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -636,6 +657,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RickyAndMortySwiftUI/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = SQPG2GUVW5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
